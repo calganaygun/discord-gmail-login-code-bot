@@ -1,0 +1,47 @@
+{
+    "name": "Discord Gmail Login Code Bot",
+    "description": "You can access a regex result of specified sender's latest mail on Discord.",
+    "repository": "https://github.com/calganaygun/discord-gmail-login-code-bot",
+    "env": {
+        "GOOGLE_CREDENTIALS": {
+            "description": "Gmail Google Credentials",
+            "required": true
+        },
+        "GOOGLE_APPLICATION_CREDENTIALS": {
+            "value": "google-credentials.json"
+        },
+        "DISCORD_BOT_TOKEN" : {
+            "description": "Discord bot token.",
+            "required": true
+        },
+        "CODE_EMAIL_SENDER": {
+            "description": "The sender of the mail to be fetched.",
+            "required": true
+        },
+        "CODE_EMAIL_SUBJECT": {
+            "description": "The subject of the mail to be fetched.",
+            "required": true
+        },
+        "CODE_REGEX": {
+            "description": "The regex that will be used to search for code in the mail.",
+            "required": true
+        },
+        "LISTENING_CHANNEL": {
+            "description": "The channel name the bot will listen to.",
+            "required": true
+        },
+        "LISTENING_PREFIX": {
+            "description": "The command prefix the bot will listen to.",
+            "required": true
+        },
+        "LISTENING_ROLE_NAME": {
+            "description": "The only role that can get the code.",
+            "required": true
+        }
+    },
+    "buildpacks": [
+        {
+          "url": "https://github.com/buyersight/heroku-google-application-credentials-buildpack.git"
+        }
+    ]
+}
