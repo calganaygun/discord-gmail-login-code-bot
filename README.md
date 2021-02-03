@@ -1,4 +1,5 @@
 # Discord Gmail Code Bot
+Get login codes from a Discord text channel.
 
 ## Get Google Credentials
 You can generate Gmail API service account with [this link](https://console.developers.google.com/start/api?id=gmail&credential=client_key).
